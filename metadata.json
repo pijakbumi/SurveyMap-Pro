@@ -1,0 +1,6 @@
+{
+  "name": "Kalkulator Koordinat TM-3 BPN",
+  "description": "Alat konversi koordinat interaktif presisi tinggi antara WGS84 (Geografis), UTM, dan TM-3° BPN untuk kebutuhan GIS dan pertanahan.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

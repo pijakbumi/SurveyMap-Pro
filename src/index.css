@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme {
+  --color-survey-primary: #1B3F79;
+  --color-survey-primary-hover: #2455A2;
+  --color-survey-bg: #E9EEF2;
+  --color-survey-border: #D1DCE3;
+  --color-survey-slate: #5B6F7A;
+  --font-sans: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+}
+
+/* Elegant transparent grid lines pattern background - 24px GIS grid spacing */
+.bg-grid-pattern {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(27, 63, 121, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(27, 63, 121, 0.06) 1px, transparent 1px);
+}
+
+/* Glassmorphism Panel styles for the Light high-glare Theme */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #D1DCE3;
+  box-shadow: 0 2px 12px rgba(27, 63, 121, 0.04);
+  border-radius: 0px !important;
+}
+
+.glass-panel-active {
+  background: rgba(255, 255, 255, 0.99);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid #1B3F79;
+  box-shadow: 0 4px 16px rgba(27, 63, 121, 0.06);
+  border-radius: 0px !important;
+}
+
+/* Nested micro-cards */
+.sub-card {
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid #D1DCE3;
+  border-radius: 0px !important;
+}
+
+.sub-card-interactive {
+  cursor: pointer;
+}
+
+.sub-card-interactive:hover {
+  border-color: #1B3F79;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(27, 63, 121, 0.03);
+}
+
+/* High glare / high contrast inputs optimized for field work */
+.high-glare-input {
+  background: #ffffff !important;
+  border: 2px solid #D1DCE3 !important;
+  color: #0f172a !important;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0px !important;
+}
+
+.high-glare-input:focus {
+  border-color: #1B3F79 !important;
+  box-shadow: 0 0 0 2px rgba(27, 63, 121, 0.1) !important;
+  outline: none;
+}
+
+/* Ambient Background Solid light slate gray-blue matching SurveyMap Pro */
+.bg-radial-glow {
+  background-color: #E9EEF2 !important;
+  background-image: none !important;
+}
+
+/* Enforce strict sharp/rigid corners globally except for dot markers */
+*, *::before, *::after {
+  border-radius: 0px !important;
+}
+
+.rounded-full, 
+.leaflet-marker-icon .rounded-full,
+.custom-draft-vertex-marker .rounded-full,
+.custom-gis-batch-marker .rounded-full,
+.custom-gis-snap-indicator .rounded-full {
+  border-radius: 9999px !important;
+}
+
+/* Leaflet Light Custom Theme Overrides */
+.leaflet-container {
+  background: #f1f5f9 !important;
+}
+
+.leaflet-bar {
+  border: 1px solid #D1DCE3 !important;
+  box-shadow: 0 4px 12px rgba(27, 63, 121, 0.06) !important;
+  border-radius: 0px !important;
+}
+
+.leaflet-bar a {
+  background-color: #ffffff !important;
+  color: #1B3F79 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.2s ease;
+  border-radius: 0px !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #E9EEF2 !important;
+  color: #2455A2 !important;
+}
+
+/* Tooltip and popup overrides matching deep navy theme */
+.leaflet-tooltip-pane .leaflet-tooltip {
+  background: #ffffff !important;
+  border: 2px solid #1B3F79 !important;
+  color: #1B3F79 !important;
+  box-shadow: 0 4px 14px rgba(27, 63, 121, 0.15) !important;
+  border-radius: 0px !important;
+}
+
+/* Elegant Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(27, 63, 121, 0.15);
+  border-radius: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1B3F79;
+}
+
+/* Spinning slow animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Custom Segment dimension label styling */
+.custom-segment-dimension-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.custom-segment-dimension-label div {
+  border-radius: 4px !important;
+  text-shadow: 
+    -1.5px -1.5px 0 #ffffff,  
+     1.5px -1.5px 0 #ffffff,
+    -1.5px  1.5px 0 #ffffff,
+     1.5px  1.5px 0 #ffffff,
+    -1.5px  0px   0 #ffffff,
+     1.5px  0px   0 #ffffff,
+     0px   -1.5px 0 #ffffff,
+     0px    1.5px 0 #ffffff,
+     0px    0px   3px #ffffff,
+     0px    0px   3px #ffffff !important;
+}
+
+/* Custom cursors for leaflet map elements based on GIS active tool states */
+#gis-map-canvas.pointer-active .leaflet-container,
+#gis-map-canvas.pointer-active .leaflet-grab,
+#gis-map-canvas.pointer-active .leaflet-interactive,
+#gis-map-canvas.pointer-active {
+  cursor: pointer !important;
+}
+
+#gis-map-canvas.drafting-active .leaflet-container,
+#gis-map-canvas.drafting-active .leaflet-grab,
+#gis-map-canvas.drafting-active .leaflet-interactive,
+#gis-map-canvas.drafting-active {
+  cursor: crosshair !important;
+}
+
+/* Custom Tooltip Transparent Styling (No Background, Borders, or Shadows) */
+.leaflet-tooltip-pane .leaflet-tooltip.no-bg-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #1B3F79 !important;
+  text-shadow: 
+    -1.5px -1.5px 0 #ffffff,  
+     1.5px -1.5px 0 #ffffff,
+    -1.5px  1.5px 0 #ffffff,
+     1.5px  1.5px 0 #ffffff,
+    -1.5px  0px   0 #ffffff,
+     1.5px  0px   0 #ffffff,
+     0px   -1.5px 0 #ffffff,
+     0px    1.5px 0 #ffffff,
+     0px    0px   3px #ffffff,
+     0px    0px   3px #ffffff !important;
+}
+.leaflet-tooltip-pane .leaflet-tooltip.no-bg-tooltip::before {
+  display: none !important;
+}
+
