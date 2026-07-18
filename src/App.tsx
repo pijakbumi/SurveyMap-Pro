@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { 
   CoordinateType, 
   GeographicCoord, 
@@ -1328,6 +1329,7 @@ export default function App() {
         activeMapCoord={activeMapCoord}
         isInsideIndonesia={isInsideIndonesia}
       />
+
 
       {/* 2. CONVERTER OR HITUNG_LUAS TAB */}
       {(currentAppTab === 'CONVERTER' || currentAppTab === 'HITUNG_LUAS') && (
@@ -3071,6 +3073,8 @@ export default function App() {
         currentTab={currentAppTab}
         onTabChange={handleTabChange}
       />
+
+      <Analytics />
 
     </div>
   );
