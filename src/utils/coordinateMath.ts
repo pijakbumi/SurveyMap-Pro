@@ -187,7 +187,7 @@ export function GEO_KE_UTM_Y(lat: number, lon: number): number {
   return result.Y;
 }
 
-// GEO -> TM-3 BPN
+// GEO -> TM-3
 export function GEO_KE_TM3_ZONA(lon: number): string {
   const z = Math.floor((lon + 180.0) / 6.0) + 1;
   const cm = (z - 31) * 6 + 3;
@@ -235,7 +235,7 @@ export function UTM_KE_TM3_Y(xUtm: number, yUtm: number, zone: number, hemi: 'N'
   return GEO_KE_TM3_Y(lat, lon);
 }
 
-// TM-3 BPN -> GEO & UTM
+// TM-3 -> GEO & UTM
 export function TM3_KE_GEO_LAT(xTm3: number, yTm3: number, zoneTm3: string): number {
   const cm = ParseTM3Zone(zoneTm3);
   const result = InverseTM(xTm3, yTm3, cm, k0_TM3, 200000.0, 1500000.0);

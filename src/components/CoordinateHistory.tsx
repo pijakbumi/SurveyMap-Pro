@@ -60,7 +60,7 @@ export default function CoordinateHistory({
       case 'UTM':
         return <span className="bg-slate-100 text-slate-700 px-2 py-0.5 text-[9px] font-extrabold border border-slate-200 font-mono">UTM GRID</span>;
       case 'TM3':
-        return <span className="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-lg text-[9px] font-extrabold border border-emerald-200/60 font-mono">TM-3° BPN</span>;
+        return <span className="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-lg text-[9px] font-extrabold border border-emerald-200/60 font-mono">TM-3°</span>;
       default:
         return null;
     }

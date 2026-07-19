@@ -940,7 +940,7 @@ export default function MapComponent({
       ) {
         hoverSnapMarkerGroup.clearLayers();
         
-        // Render a gorgeous BPN-style snap target box (a square with a center dot)
+        // Render a gorgeous professional-style snap target box (a square with a center dot)
         const snapBoxIcon = L.divIcon({
           className: 'custom-hover-snap-indicator',
           html: `
@@ -1064,7 +1064,7 @@ export default function MapComponent({
       const { lat, lon } = activeCoord;
       const position: [number, number] = [lat, lon];
 
-      // Custom pulsing blue marker to avoid broken default image assets and fit professional BPN brand tone
+      // Custom pulsing blue marker to avoid broken default image assets and fit professional professional brand tone
       const customIcon = L.divIcon({
         className: 'custom-gis-marker',
         html: `
@@ -1313,7 +1313,7 @@ export default function MapComponent({
 
       const latlngs = validDraftVertices.map(c => [c.lat, c.lon] as [number, number]);
 
-      // Render Draft Vertices (BPN SurveyMap Pro geodetic crosshair target markers)
+      // Render Draft Vertices (SurveyMap Pro geodetic crosshair target markers)
       validDraftVertices.forEach((vertex, idx) => {
         const isFirst = idx === 0;
         const isLast = idx === validDraftVertices.length - 1;

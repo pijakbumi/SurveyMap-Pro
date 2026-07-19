@@ -111,7 +111,7 @@ export default function App() {
   const [utmZone, setUtmZone] = useState<number>(49);
   const [utmHemi, setUtmHemi] = useState<'N' | 'S'>('S');
 
-  // 4. TM-3 BPN Inputs
+  // 4. TM-3 Inputs
   const [tm3X, setTm3X] = useState<string>('241285.5000');
   const [tm3Y, setTm3Y] = useState<string>('1428510.4000');
   const [tm3Zone, setTm3Zone] = useState<string>('49.1');
@@ -2307,7 +2307,7 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* TM-3 BPN */}
+                  {/* TM-3 */}
                   {activeTab === 'TM3' && (
                     <div className="space-y-4 animate-fade-in">
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
